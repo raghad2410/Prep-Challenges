@@ -23,8 +23,8 @@
 const objLat = (obj) => {
     // write your code here
     return (`my name is ${obj.firstName.charAt(0).toUpperCase() +
-        obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase()
-        + obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}.`)
+        obj.firstName.slice(1)} ${obj.lastName.charAt(0).toUpperCase() +
+        obj.lastName.slice(1)} I am ${obj.age} YO, and I love ${obj.hobby}.`)
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -91,7 +91,7 @@ const cvFormatter = (arr) => {
     // write your code here
     let array = [];
     for (let i = 0; i < arr.length; i++) {
-        let fullName = (`${arr[i].firstName} ${arr[i].lastName}`);
+        let fullName = `${arr[i].firstName} ${arr[i].lastName}`;
         if (arr[i].yearsOfExperience > 1) {
             if (arr[i].firstName === null) {
                 fullName = arr[i].lastName
@@ -105,8 +105,7 @@ const cvFormatter = (arr) => {
         }
     }
     return array
-}
-
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
