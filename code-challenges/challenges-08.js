@@ -26,12 +26,17 @@
 // Output:
 // ["Customer Name :Romio Joliat , Age :35", "Customer Name :Mario Ristrova , Age :39", ... ]
 
+
 const customerAndAge = (obj) => {
-  const customerss = [];
-  for (const ele in obj) {
-    customerss.push(`Customer Name :${ele} , Age :${obj[ele]}`);
-    return customerss;
+
+  const customerInfo = [];
+
+  for (const key in obj) {
+    let result = `Customer Name :${key} , Age :${obj[key]}`
+    customerInfo.push(result)
   }
+
+  return customerInfo;
 };
 // -------------------------------------------------------------------------------------------------------
 
@@ -55,15 +60,20 @@ const customerAndAge = (obj) => {
 //
 // Note:
 // You can solve this challenge by using Object.entries
-const getEntries = (obj) => {
-  const result = [];
-  for (const recipe in obj) {
-    const elem = obj[recipe];
-    result.push(`${recipe}: ${Array.isArray(elem) ? elem.join(',') : rec}`);
-  }
-  return result;
-};
 
+
+
+const getEntries = (obj) => {
+
+  const customerInfo = [];
+
+  for (const key in obj) {
+    let result = `${key}: ${obj[key]}`
+    customerInfo.push(result)
+  }
+
+  return customerInfo;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
